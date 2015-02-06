@@ -2,6 +2,7 @@
 
 var fs = require('fs');
 var bitmap = fs.readFileSync('test.bmp');
+console.log(bitmap);
 
 var bitmapObject = {};
 
@@ -14,18 +15,26 @@ bitmapObject.height = bitmap.readUInt32LE(22);
 bitmapObject.colorDepth = bitmap.readUInt16LE(28);
 bitmapObject.paletteSize = bitmap.readUInt32LE(46);
 
-bitmapObject.paletteOneR = bitmap.readUInt32LE(54);
-bitmapObject.paletteOneG = bitmap.readUInt32LE(58);
-bitmapObject.paletteOneB = bitmap.readUInt32LE(62);
-bitmapObject.paletteOneA = bitmap.readUInt32LE(66);
 
 
+bitmap[54] = 0;
+bitmap[55] = 100;
+bitmap[56] = 240;
+bitmap[57] = 255;
 
+console.log(bitmap[54]);
 
+// for (var i = 54; i < 1078; i++) {
+// 	bitmap[i] = (Math.random() * 255);
+// };
+
+// for (var i = 1078; i < 11078; i++) {
+// 	bitmap[i] = (Math.random() * 255);
+// };
 
 console.dir(bitmapObject);
 
-fs.writeFile('test2.bmp', bitmapObject, function(err, success) {
+fs.writeFile('test2.bmp', bitmap, function(err, success) {
   if (err) throw err;
   console.log('Success!');
 });
