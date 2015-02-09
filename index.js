@@ -1,19 +1,26 @@
 'use strict'
 
-var fs = require('fs');
-var oldFile = process.argv[2].toString();
-var bitmap = fs.readFileSync(oldFile);
+function wrapper() {
 
-var displayBMPProps = require('./lib/readFile');
-var randomize = require('./lib/randomize');
-var greyScale = require('./lib/greyScale')
+  var fs = require('fs');
+  var oldFile = process.argv[2].toString();
+  var bitmap = fs.readFileSync(oldFile);
 
-displayBMPProps(bitmap);
+  var displayBMPProps = require('./lib/readFile');
+  var randomize = require('./lib/randomize');
+  var greyScale = require('./lib/greyScale')
 
-// randomize(bitmap, oldFile);
+  displayBMPProps(bitmap);
 
-greyScale(bitmap, oldFile);
+  // randomize(bitmap, oldFile);
 
+  greyScale(bitmap, oldFile);
+
+}
+
+wrapper()
+
+module.exports = wrapper;
 
 
 
