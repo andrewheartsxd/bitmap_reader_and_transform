@@ -1,0 +1,38 @@
+{
+  "name": "bitmap_reader_and_transform",
+  "version": "0.1.0",
+  "description": "Reads image, transforms to grey scale, writes out new image file.",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jscs": "^0.1.8",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-simple-mocha": "^0.4.0",
+    "mocha": "^2.1.0"
+  },
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrewheartsxd/bitmap_reader_and_transform.git"
+  },
+  "keywords": [
+    "bitmap",
+    "greyscale",
+    "bmp"
+  ],
+  "author": "Brandon Burns & Andrew Hwang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrewheartsxd/bitmap_reader_and_transform/issues"
+  },
+  "homepage": "https://github.com/andrewheartsxd/bitmap_reader_and_transform"
+}
