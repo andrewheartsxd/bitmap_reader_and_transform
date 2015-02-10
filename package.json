@@ -1,0 +1,32 @@
+{
+  "name": "bitmap_reader_and_transform",
+  "version": "0.1.0",
+  "description": "Reads and transforms a bitmap file",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jscs": "^0.1.8",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-simple-mocha": "^0.4.0",
+    "mocha": "^2.1.0"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrewheartsxd/bitmap_reader_and_transform.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewheartsxd/bitmap_reader_and_transform/issues"
+  },
+  "homepage": "https://github.com/andrewheartsxd/bitmap_reader_and_transform"
+}

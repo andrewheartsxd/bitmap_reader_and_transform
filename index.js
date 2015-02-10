@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 function wrapper() {
 
@@ -8,7 +8,7 @@ function wrapper() {
 
   var displayBMPProps = require('./lib/readFile');
   var randomize = require('./lib/randomize');
-  var greyScale = require('./lib/greyScale')
+  var greyScale = require('./lib/greyScale');
 
   displayBMPProps(bitmap);
 
@@ -18,7 +18,7 @@ function wrapper() {
 
 }
 
-wrapper()
+wrapper();
 
 module.exports = wrapper;
 

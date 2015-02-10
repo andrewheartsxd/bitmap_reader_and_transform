@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var expect = require('chai').expect;
 var displayBMPProps = require('../lib/readFile');
@@ -25,7 +25,7 @@ describe('when given a filename through the command line', function() {
       }
 
       return newBitMap;
-    };
+    }
 
     this.newBitMap = bitmapCreator();
 
@@ -40,11 +40,11 @@ describe('when given a filename through the command line', function() {
 
 // Tests if output file is greyscale
   it('should return palette where R value = G value = B value', function() {
-    var paletteCompare = Math.floor(Math.random()*256)
+    var paletteCompare = Math.floor(Math.random()*256);
     // if reading from command line, substitute this.bitmap for this.newBitMap below:
     var result = greyScale(this.newBitMap, this.oldName);
-    expect(result[paletteCompare]['R']).equal(result[paletteCompare]['B']);
-    expect(result[paletteCompare]['B']).equal(result[paletteCompare]['G']);
+    expect(result[paletteCompare].R).equal(result[paletteCompare].B);
+    expect(result[paletteCompare].B).equal(result[paletteCompare].G);
   });
 
 });
